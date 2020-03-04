@@ -41,7 +41,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* height: 100vh; */
 }
+.red{
+  width: 100%;
+  display: flex;
+  background-color: red;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; */
+}
+
 
 .btn-container{
  padding: 20px;
@@ -66,3 +76,22 @@ background-color: black;
   transition: ease-in-out 0.3s;
 
 }
+.changeColor{
+  outline: 0;
+  cursor: pointer;
+  border:  none;
+
+  background-color: rgb(49, 148, 214);
+  color: white;
+  font-size: 25px;
+border-radius: 5%;
+  text-align: center;
+  margin: 20% 5px;
+  transition: ease-in-out 0.3s;
+}
+.changeColor:hover{
+  background-color: black;  
+    transition: ease-in-out 0.3s;
+    color: goldenrod;
+  
+  }

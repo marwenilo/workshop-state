@@ -41,11 +41,7 @@ Instead, state updates should be made with a special method called setState( ).
 
 ----Creating The State----
 
-// A class has a special method called constructor( ) and it is being called during object creation.
 
-// We can also initialize our object properties or bind events inside the constructor( ).
-
-// The same rule applies to state. Since state is also an object, it should be initialized inside the constructor method:
 
 .
 ========*
@@ -54,6 +50,8 @@ Instead, state updates should be made with a special method called setState( ).
 
 
 and later we can render the properties of the state object with JavaScript’s dot notation, inside the render ( ) method:
+
+this.state.
 
 //.......app.js
 
@@ -65,7 +63,7 @@ Now let’s move a step forward and see how to update the state. ****>
 A Component’s state can change under some circumstances like a server response or user interaction 
 (clicking on a button, scrolling the page etc).
 
-So when data changes, when a change in the state happens, React takes this information and updates the UI.
+So when data changes, or change in the state happens, React takes this information and updates the UI.
 
 ----------- The important point here is that we should not modify the state directly.
 
@@ -74,6 +72,11 @@ So when data changes, when a change in the state happens, React takes this infor
  this.state.name = "testing state";  // wrong  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
  So we shouldn’t change a property of the state as we do it for other objects in JavaScript. 
+
+like strings !!   
+let str = "abc"
+str = "bcd"
+
  
  Instead, React provides another way for handling state changes: the setState( ) method
 

@@ -1,53 +1,63 @@
 import React, { Component } from 'react'
-import Input from './workshop/Input'
 import './App.css';
+ class App extends Component {
+state={
+  count:0,
+  name:"Marwen",
+  isClicked :false
 
+}
 
-class App extends Component {
+inc=()=>{
+  this.setState({
+    count : this.state.count + 1,
+    num:1
+  })
+}
 
-    state = {
-      id: 1,
-      name: "Marwen"
-    
-  };
-  handleClick=()=>{
+dec =()=>{
+  this.setState({
+    count : this.state.count -1,
+    num:this.state.num + 1
+  })
+}
+
+handleChange=(o)=>{
+  
     this.setState({
-      id: this.state.id + 1
-    });
-  }
-  handleClickn=()=>{
-    this.setState({
-      id: this.state.id -1
-    });
-  }
-  handleChange=(e)=>{
-  if (e.target.value.length>6){
-    this.setState({
-      name:e.target.value
-    }) 
-  }
-   
-  }
+      name:o.target.value
+    })
+  
 
-
-  render() {
-
-    return (
-      
-      <div className="container">
-        <h1>{this.state.id}</h1>
-        <h1>{this.state.name}</h1>
-        <div className="btn-container">
-        <button onClick={this.handleClick}>+</button>
-        <button onClick={this.handleClickn}>-</button>
-        </div>
-        <Input change={this. handleChange} name={this.state.name} />
-   {  /*  <button onClick={this.handleClick()}>Change The Number</button> eerrrrrrerererererererere */}
-      </div>
-    );
-  }
 }
 
 
-export default App;
 
+changeColor=()=>{
+  this.setState({
+    isClicked:!this.state.isClicked
+  })
+}
+
+
+
+
+
+
+  render() {
+    return (
+      <div className={this.state.isClicked?"red":"container"}>
+        <h1>{this.state.count}</h1>
+         <div className="btn-container">
+          <button onClick={this.inc}>+</button>
+          <button onClick={this.dec}>-</button>
+          </div>
+
+          <h1>{this.state.name}</h1>
+          <input  onChange={this.handleChange}      />
+          <button className="changeColor" onClick={ this.changeColor}     >Click me to change color</button>
+      </div>
+    )
+  }
+}
+export default App

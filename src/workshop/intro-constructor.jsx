@@ -8,15 +8,14 @@ constructor(props) {
 
     state = {
       id: 1,
-      name: "test"
+      name: "test",
+      arr : [kjdsf,"sdf",qsdfqsdqs]
     
   };
 
 
 
-
-
-
-
-
   ////............... APP
+this.setState({
+  id:this.state.id +1
+})
