@@ -23,11 +23,13 @@ dec =()=>{
 }
 
 handleChange=(o)=>{
-  
+  if(o.target.value.length>3){
     this.setState({
       name:o.target.value
     })
   
+  }
+
 
 }
 
